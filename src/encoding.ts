@@ -32,7 +32,7 @@ export async function encode(text: string): Promise<string> {
 
   // v2:
   const x1 = bytesOfString(text);
-  const encoded = encodeURIComponent(base64OfBytes(await compressedOf(bytesOfString(text))).str);
+  const encoded = encodeURIComponent(base64OfBytes(await compressedOf(x1)).str);
   return 'v2/' + encoded;
 }
 
